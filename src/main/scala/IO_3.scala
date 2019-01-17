@@ -34,4 +34,7 @@ val acquire = IO {
   scala.io.Source.fromString("Hello world")
 }
 
-Resource.fromAutoCloseable(acquire).use(source => IO(println(source.mkString))).unsafeRunSync()
+Resource
+  .fromAutoCloseable(acquire)
+  .use(source => IO(println(source.mkString)))
+  .unsafeRunSync()
