@@ -6,7 +6,9 @@
 
 @title[Referential transparency]
 ## Referential transparency
-
+<br/>
+<br/>
+<br/>
 
 #### An expression is called **referentially transparent** if it can be replaced with its corresponding value without changing the program's behavior.
 
