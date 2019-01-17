@@ -42,3 +42,12 @@ IO can describe synchronous or asynchronous computations that:
 * @size[1.0em](on evaluation yield exactly one result)
 * @size[1.0em](can end in either success or failure and in case of failure flatMap chains get short-circuited)
 * @size[1.0em](can be canceled, but note this capability relies on the user to provide cancellation logic)
+
+---
+
+### Quick tour of IO
+
+@[1-5]
+@[8-12]
+@[15-26]
+@[28-41]
