@@ -63,6 +63,8 @@ IO can describe synchronous or asynchronous computations that:
 @[27-38]
 @[40-53]
 
+---
+
 ### Quick tour of IO - part 3
 +++?code=src/main/scala/IO_3.scala&lang=scala&title=IO
 
