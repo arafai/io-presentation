@@ -1,66 +1,30 @@
----?color=linear-gradient(to right, #c02425, #f0cb35)
-@title[Introduction]
+## Writing purely functional code using IO
 
-@snap[west text-25 text-bold text-white]
-GitPitch<br>*The Template*
-@snapend
-
-@snap[south-west byline text-white text-06]
-The Fastest Way From Idea To Presentation.
-@snapend
 
 ---
-@title[Slide Markdown]
 
-### Each slide in this presentation is provided as a *template*.
 
-<br><br>
+@title[Referential transparency]
 
-@snap[south span-100 text-purple text-05]
-Reuse the *markdown snippet* for any slide in this template within your own @css[text-gold text-bold](PITCHME.md) files.
-@snapend
+Referential transparency - An expression is called referentially transparent if it can be replaced with
+its corresponding value without changing the program's behavior.
 
----
-@title[Tip! Fullscreen]
+```scala
+val r = new Random(0L)
 
-![TIP](template/img/tip.png)
-<br>
-For the best viewing experience ever, press F for fullscreen.
-@css[template-note](We recommend using the *SPACE* key to navigate between slides.)
+for {
+  randomOne <- Future(r.nextInt)
+  randomTwo <- Future(r.nextInt)
+} yield (randomOne, randomTwo)
 
----?include=template/md/split-screen/PITCHME.md
 
----?include=template/md/sidebar/PITCHME.md
 
----?include=template/md/list-content/PITCHME.md
+// refactoring
 
----?include=template/md/boxed-text/PITCHME.md
+val future = Future(r.nextInt)
+for {
+  randomOne <- future
+  randomTwo <- future
+} yield (randomOne, randomTwo)
 
----?include=template/md/image/PITCHME.md
-
----?include=template/md/sidebox/PITCHME.md
-
----?include=template/md/code-presenting/PITCHME.md
-
----?include=template/md/header-footer/PITCHME.md
-
----?include=template/md/quotation/PITCHME.md
-
----?include=template/md/announcement/PITCHME.md
-
----?include=template/md/about/PITCHME.md
-
----?include=template/md/wrap-up/PITCHME.md
-
----?image=template/img/presenter.jpg
-@title[The Template Docs]
-
-@snap[north-west sign-off]
-### **Now it's @color[#e58537](your) turn.**
-<br>
-#### Quickstart your next slide deck<br>with @size[1.4em](The GitPitch Template).
-@snapend
-
-@snap[south docslink text-gold span-100]
-For supporting documentation see the [The Template Docs](https://gitpitch.com/docs/the-template)
-@snapend
+```
