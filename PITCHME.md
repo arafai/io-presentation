@@ -40,5 +40,5 @@ Referential transparency and IO
 
 IO can describe synchronous or asynchronous computations that:
 * @size[1.5em](on evaluation yield exactly one result)
-*  @size[1.5em](can end in either success or failure and in case of failure flatMap chains get short-circuited)
-*  @size[1.5em](can be canceled, but note this capability relies on the user to provide cancellation logic)
+* @size[1.5em](can end in either success or failure and in case of failure flatMap chains get short-circuited)
+* @size[1.5em](can be canceled, but note this capability relies on the user to provide cancellation logic)
