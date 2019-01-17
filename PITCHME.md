@@ -5,6 +5,7 @@
 
 
 @title[Referential transparency]
+#### Referential transparency
 
 An expression is called **referentially transparent** if it can be replaced with
 its corresponding value without changing the program's behavior.
@@ -12,19 +13,9 @@ its corresponding value without changing the program's behavior.
 ---
 @title[Referential transparency 2]
 
-```scala
-val r = new Random(0L)
+#### Breaking referentially transparency
 
-for {
-  randomOne <- Future(r.nextInt)
-  randomTwo <- Future(r.nextInt)
-} yield (randomOne, randomTwo)
++++?code=src/main/scala/Future.scala&lang=scala&title=Future
 
-// refactoring
-val future = Future(r.nextInt)
-for {
-  randomOne <- future
-  randomTwo <- future
-} yield (randomOne, randomTwo)
-
-```
+@[1-6]
+@[9-13]
