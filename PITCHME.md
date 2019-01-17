@@ -9,6 +9,9 @@
 An expression is called **referentially transparent** if it can be replaced with
 its corresponding value without changing the program's behavior.
 
+---
+@title[Referential transparency 2]
+
 ```scala
 val r = new Random(0L)
 
