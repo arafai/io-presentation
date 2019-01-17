@@ -45,10 +45,26 @@ IO can describe synchronous or asynchronous computations that:
 
 ---
 
-### Quick tour of IO
+### Quick tour of IO - part 1
 +++?code=src/main/scala/IO.scala&lang=scala&title=IO
 
 @[1-5]
-@[8-12]
-@[15-26]
-@[28-41]
+@[8-13]
+@[16-27]
+@[29-42]
+
+---
+
+### Quick tour of IO - part 2
++++?code=src/main/scala/IO_2.scala&lang=scala&title=IO
+
+@[1-7]
+@[10-25]
+@[27-53]
+
+### Quick tour of IO - part 3
++++?code=src/main/scala/IO_3.scala&lang=scala&title=IO
+
+@[1-7]
+@[10-33]
+@[27-31]

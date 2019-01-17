@@ -8,6 +8,7 @@ IO.pure(25).flatMap(n => IO(println(s"Number is: $n")))
 // Synchronous Effects -  IO.apply
 
 def apply[A](body: => A): IO[A] = ???
+//equivalent of Sync[IO].delay
 
 val readLn = IO(scala.io.StdIn.readLine)
 
