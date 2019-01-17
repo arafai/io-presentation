@@ -41,7 +41,7 @@ object MyApp extends IOApp {
 
   def run(args: List[String]) = {
     val name = blockingThreadPool.use { ec =>
-      // Blocking operation, executed on special thread-pool
+// Blocking operation, executed on special thread-pool
       contextShift.evalOn(ec)(readName)
     }
 
