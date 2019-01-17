@@ -25,7 +25,7 @@ Reuse the *markdown snippet* for any slide in this template within your own @css
 
 ![TIP](template/img/tip.png)
 <br>
-For the best viewing experience, press F for fullscreen.
+For the best viewing experience ever, press F for fullscreen.
 @css[template-note](We recommend using the *SPACE* key to navigate between slides.)
 
 ---?include=template/md/split-screen/PITCHME.md
