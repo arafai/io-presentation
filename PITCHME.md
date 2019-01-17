@@ -1,8 +1,6 @@
 ## Writing purely functional code using IO
 
-
 ---
-
 
 @title[Referential transparency]
 ## Referential transparency
@@ -15,6 +13,8 @@
 ---
 @title[Referential transparency 2]
 
+Referential transparency and Scala Future
+
 +++?code=src/main/scala/Future.scala&lang=scala&title=Future
 
 @[1-6]
@@ -22,6 +22,8 @@
 
 ---
 @title[Referential transparency 2]
+
+Referential transparency and IO
 
 +++?code=src/main/scala/IO_RF.scala&lang=scala&title=IO
 
