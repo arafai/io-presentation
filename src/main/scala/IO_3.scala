@@ -15,7 +15,8 @@ abstract class Resource[F[_], A] {
 }
 
 def mkResource(s: String): Resource[IO, String] = {
-  val acquire: IO[String] = IO(println(s"Acquiring $s")).flatMap(_ => IO.pure(s))
+  val acquire: IO[String] =
+    IO(println(s"Acquiring $s")).flatMap(_ => IO.pure(s))
 
   def release(s: String): IO[Unit] = IO(println(s"Releasing $s"))
 
@@ -27,7 +28,8 @@ val r = for {
   inner <- mkResource("inner")
 } yield (outer, inner)
 
-r.use { case (a, b) => IO(println(s"Using $a and $b")) }.unsafeRunSync
+r.use { case (a, b) => IO(println(s"Using $a and $b")) }
+ .unsafeRunSync
 
 
 val acquire = IO {
