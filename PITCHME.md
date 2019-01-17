@@ -6,7 +6,7 @@
 
 @title[Referential transparency]
 
-Referential transparency - An expression is called referentially transparent if it can be replaced with
+An expression is called **referentially transparent** if it can be replaced with
 its corresponding value without changing the program's behavior.
 
 ```scala
@@ -17,10 +17,7 @@ for {
   randomTwo <- Future(r.nextInt)
 } yield (randomOne, randomTwo)
 
-
-
 // refactoring
-
 val future = Future(r.nextInt)
 for {
   randomOne <- future
